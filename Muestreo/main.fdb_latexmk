@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1793630860.66775 "main.bcf" "main.bbl" "main" 1793630863.02752 0
-  "main.bcf" 1793630862.93509 133541 46de64d4d61bc9c76a8eed27352ce6f8 "pdflatex"
+["biber main"] 1793631885.71341 "main.bcf" "main.bbl" "main" 1793632287.55209 0
+  "main.bcf" 1793632287.39591 133541 46de64d4d61bc9c76a8eed27352ce6f8 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1793630861.61261 "/home/camiloasd/Documentos/VS/EMAT-Actividades/Muestreo/main.tex" "main.pdf" "main" 1793630863.0278 0
-  "/home/camiloasd/Documentos/VS/EMAT-Actividades/Muestreo/main.tex" 1793630858.88334 11125 df1e8f73fe17be990a5b97ea4401d60c ""
+["pdflatex"] 1793632285.08079 "/home/camiloasd/Documentos/VS/EMAT-Actividades/Muestreo/main.tex" "main.pdf" "main" 1793632287.55269 0
+  "/home/camiloasd/Documentos/VS/EMAT-Actividades/Muestreo/main.tex" 1793632189.07581 11553 c544872d00ebf02838b18e5a1304a72b ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1529098226 3124 3813fd4c981d99822890a2861b0d274c ""
@@ -14,6 +14,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm" 1572128992 1408 ef71a9098da4d5a1a85b5920860b6731 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/NewTXMI7.tfm" 1572128992 1556 4df22ac3e5cc03ff0898d83d8817c6cf ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm" 1708895146 11564 e66d72473587e55f718c159f23e34b6e ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm" 1600636029 3008 ca0c83ca288d9f1c5d2fca0e8e268f10 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm" 1690487162 3056 db59b44fb00cc29b676bd92c4dc6750f ""
@@ -35,6 +36,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/txsys.tfm" 1724614892 1656 68b5079c64f1cefe2cf442b6a60cf2fd ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm" 1255129411 1600 20cdf11dab97d5d39e847571f9314407 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb" 1724614892 32409 aee30089ce2d804d7327a2f8ccff0462 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb" 1572128992 34733 61fa3c01fac511e451670c1b454ff211 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb" 1621283831 33424 f912ebe54685d0a65d3c046e3d517e38 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb" 1736550153 65081 1217ccf27de85b7db49806ee29c16745 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb" 1724614892 45985 fd5f8adcc4f0e93e9a95469e12126723 ""
@@ -44,6 +46,7 @@
   "/usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf" 1583272976 956 44be8e0aea9c6d145fc21c9948a6b4b5 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntxexx.vf" 1699567298 1716 73c8d39d4c3ace9ec98a8f066bb3b494 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntxmi.vf" 1724614892 2600 81386b40b010afb86643b695ffc490aa ""
+  "/usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntxmi7.vf" 1622753257 2576 4000b56c7179792370b883556f71007a ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntxmia.vf" 1724614892 2052 32313fcb5c0cec3f7956da7328e62ee4 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/newtx/ntxsy.vf" 1724614892 1792 7cf99effbd74f7851ca7683a6d12b685 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1777593600 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -169,11 +172,11 @@
   "img/Escudo_UNSA.png" 1793629082.789 551300 bfb751c315bf335e9fb54b959f58fe6b ""
   "img/logo_abet.png" 1793629095.36082 6307 66ff7f82180b3b29c348bdae974447b6 ""
   "img/logo_episunsa.png" 1793629100.03725 6815 7da1fe7727dad63b523d0fbca337594d ""
-  "main.aux" 1793630862.92909 3691 a574461b41c3fe26413f6f5e52ec8ec4 "pdflatex"
-  "main.bbl" 1793630861.577 466 76d65a242ec496c9b4361af646ff12cb "biber main"
-  "main.run.xml" 1793630862.93822 2360 e823dede0fdb354f7eff64774b1cfad0 "pdflatex"
-  "main.tex" 1793630858.88334 11125 df1e8f73fe17be990a5b97ea4401d60c ""
-  "portada.tex" 1793630337.51839 1781 99c78c10610091788a7ae0fcb0d95f72 ""
+  "main.aux" 1793632287.38591 3321 65801a109ae5b609526c1384a23772f4 "pdflatex"
+  "main.bbl" 1793631888.10195 466 76d65a242ec496c9b4361af646ff12cb "biber main"
+  "main.run.xml" 1793632287.39856 2360 e823dede0fdb354f7eff64774b1cfad0 "pdflatex"
+  "main.tex" 1793632189.07581 11553 c544872d00ebf02838b18e5a1304a72b ""
+  "portada.tex" 1793632284.64887 1784 35e599ad0ce6e115ab43d0633a3fe8d1 ""
   (generated)
   "main.aux"
   "main.bcf"

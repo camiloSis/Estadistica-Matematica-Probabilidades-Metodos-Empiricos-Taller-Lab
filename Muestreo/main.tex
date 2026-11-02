@@ -68,25 +68,30 @@
 \input{portada.tex}
 
 % ---------- Resumen en español ----------
-\section{Actividades}
+\section{Actividades: Estimación}
 
-\subsection{Actividad: Estimación}
+\subsection{Estimación de un parámetro (resumen)}
 
-\subsubsection{Estimación de un parámetro (resumen)}
+La \textbf{estimación estadística} consiste en utilizar datos muestrales para determinar los valores de parámetros desconocidos de una población (Definición 1). Un \textbf{estimador} es un estadístico, es decir, una regla o fórmula que se usa para aproximar un parámetro. El número que resulta al evaluar el estimador en una muestra particular se llama \textbf{estimación} (Definición 2).
 
-Un \textbf{parámetro} es una característica numérica de la población (por ejemplo $\mu$, $\sigma^2$ o $P$) que casi siempre es desconocida. La \textbf{estimación} es el proceso de usar los datos de una muestra aleatoria para aproximar ese parámetro. Un \textbf{estimador} es un estadístico (una fórmula) y una \textbf{estimación} es el valor que toma al aplicarlo a una muestra concreta.
-
-Existen dos tipos de estimación:
+La estimación de un parámetro $\theta$ puede tomar dos formas:
 \begin{itemize}
-    \item \textbf{Estimación puntual:} se da un único valor como aproximación del parámetro. Por ejemplo, $\bar{x}$ estima a $\mu$, $s^2$ estima a $\sigma^2$ y $\hat{p}$ estima a $P$. Un buen estimador debe ser insesgado ($E(\hat{\theta})=\theta$), eficiente (de varianza mínima) y consistente (mejora al aumentar $n$).
-    \item \textbf{Estimación por intervalo:} se construye un intervalo $[L_1, L_2]$ que contiene al parámetro con una probabilidad $1-\alpha$ llamada \textbf{nivel de confianza}. Tiene la forma general
+    \item \textbf{Estimación puntual:} es un único valor numérico $\hat{\theta}$ del estadístico (Definición 3). Por ejemplo, $\bar{x}$ estima a $\mu$, $s^2$ estima a $\sigma^2$ y $\hat{p}$ estima a $P$.
+    \item \textbf{Estimación por intervalos de confianza:} se usa un intervalo aleatorio cuyos extremos $a$, $b$ son estadísticos (Definición 4), de modo que
     \[
-        \text{estimador} \pm (\text{valor crítico})\cdot(\text{error estándar}).
+        P(a \le \theta \le b) = 1-\alpha .
     \]
-    El nivel de confianza no es la probabilidad de que el parámetro esté en un intervalo ya calculado. Significa que, si se repitiera el muestreo muchas veces, el $(1-\alpha)100\%$ de los intervalos construidos contendría al parámetro.
+    El valor $1-\alpha$ es el \textbf{nivel de confianza}. A mayor $1-\alpha$, mayor probabilidad de acierto, por lo que $\alpha$ debe ser pequeño.
 \end{itemize}
 
-\subsubsection{Problema de aplicación}
+Un buen estimador debe cumplir tres propiedades:
+\begin{itemize}
+    \item \textbf{Insesgado:} la media de su distribución muestral es igual al parámetro poblacional.
+    \item \textbf{Eficiente:} entre dos estimadores con la misma media, es el de menor varianza.
+    \item \textbf{Consistente:} se aproxima al valor real del parámetro a medida que crece el tamaño de la muestra.
+\end{itemize}
+
+\subsection{Problema de aplicación}
 
 El administrador de la red de la facultad quiere evaluar el servidor del aula virtual. El contrato de servicio exige que el servidor cumpla dos condiciones:
 \begin{enumerate}
@@ -94,7 +99,7 @@ El administrador de la red de la facultad quiere evaluar el servidor del aula vi
     \item[(ii)] No más del $10\%$ de las solicitudes deben tardar más de $200$ ms.
 \end{enumerate}
 
-Se sabe, por estudios previos, que el tiempo de respuesta se distribuye normalmente, pero se desconocen su media y su varianza. En una hora de trabajo normal se seleccionaron al azar $n=15$ solicitudes y se midió su tiempo de respuesta (en ms):
+Se sabe, por estudios previos, que el tiempo de respuesta se distribuye aproximadamente normal, pero se desconocen su media y su varianza. En una hora de trabajo normal se seleccionaron al azar $n=15$ solicitudes y se midió su tiempo de respuesta (en ms):
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -111,46 +116,46 @@ Con un nivel de confianza del $95\%$:
     \item[a)] Estime por intervalo el tiempo medio de respuesta $\mu$.
     \item[b)] Estime por intervalo la varianza $\sigma^2$ y la desviación estándar $\sigma$.
     \item[c)] Estime por intervalo la proporción $P$ de solicitudes que tardan más de $200$ ms.
-    \item[d)] ¿Qué tamaño de muestra se necesita para estimar $\mu$ con un error máximo de $2$ ms? ¿Y para estimar $P$ con un error máximo de $0.05$?
+    \item[d)] ¿Qué tamaño de muestra se necesita para estimar $\mu$ con un error de estimación no mayor a $2$ ms? ¿Y para estimar $P$ con un error no mayor a $0.05$?
     \item[e)] ¿Cumple el servidor las condiciones del contrato?
 \end{enumerate}
 
-\subsubsection{Solución}
+\subsection{Solución}
 
 \paragraph{Teoría necesaria.}
 \begin{enumerate}
-    \item \textbf{Estimadores puntuales.} La media muestral $\bar{x}=\frac{1}{n}\sum x_i$ es un estimador insesgado de $\mu$. La varianza muestral $s^2=\frac{1}{n-1}\sum (x_i-\bar{x})^2$ es insesgada para $\sigma^2$. La proporción muestral $\hat{p}=\frac{x}{n}$ es insesgada para $P$.
-    \item \textbf{Distribución muestral de la media (Teorema 1).} $\mu_{\bar{x}}=\mu$ y $\sigma_{\bar{x}}^2=\frac{\sigma^2}{n}$. El error estándar de $\bar{x}$ es $\frac{\sigma}{\sqrt{n}}$, que se estima con $\frac{s}{\sqrt{n}}$. Como el muestreo es de una población prácticamente infinita, no se necesita el factor de corrección.
-    \item \textbf{Distribución $t$ de Student.} Si la población es normal y $\sigma$ es desconocida, entonces $t=\dfrac{\bar{x}-\mu}{s/\sqrt{n}}$ tiene distribución $t$ con $n-1$ grados de libertad. Por tanto, el intervalo de confianza para $\mu$ es
+    \item \textbf{Estimadores puntuales.} Los estimadores usuales son $\bar{x}=\frac{1}{n}\sum x_i$ para $\mu$, $s^2=\frac{\sum (x_i-\bar{x})^2}{n-1}$ para $\sigma^2$ y $\hat{p}=\frac{x}{n}$ para $P$. Además, por el método de máxima verosimilitud, $\bar{x}$ es el estimador de $\mu$ en una población normal y $\hat{p}$ lo es de $P$ en una población binomial.
+    \item \textbf{Intervalo para la media con varianza desconocida (muestra pequeña).} Si $X$ es aproximadamente normal con $\sigma^2$ desconocida, la variable $T=\dfrac{\bar{x}-\mu}{s/\sqrt{n}}$ sigue una distribución $t$ de Student con $n-1$ grados de libertad. El intervalo de confianza con coeficiente $1-\alpha$ es
     \[
-        \bar{x} \pm t_{1-\alpha/2,\,n-1}\,\frac{s}{\sqrt{n}}.
+        \bar{x} - t_{\alpha/2}(n-1)\frac{s}{\sqrt{n}} \;\le\; \mu \;\le\; \bar{x} + t_{\alpha/2}(n-1)\frac{s}{\sqrt{n}} .
     \]
-    \item \textbf{Distribución ji-cuadrada.} Si la población es normal, $\chi^2=\dfrac{(n-1)s^2}{\sigma^2}$ tiene distribución $\chi^2$ con $n-1$ grados de libertad. El intervalo de confianza para $\sigma^2$ es
+    \item \textbf{Intervalo para una proporción.} Con la distribución muestral de proporciones ($\mu_{\hat{p}}=P$, $\sigma^2_{\hat{p}}=\frac{PQ}{n}$), y si $n\hat{p}>5$ y $n\hat{q}>5$, se aproxima por una normal y
     \[
-        \frac{(n-1)s^2}{\chi^2_{1-\alpha/2,\,n-1}} \;\le\; \sigma^2 \;\le\; \frac{(n-1)s^2}{\chi^2_{\alpha/2,\,n-1}}.
+        P = \hat{p} \pm z_{\alpha/2}\sqrt{\frac{\hat{p}\,\hat{q}}{n}} .
     \]
-    \item \textbf{Distribución muestral de proporciones.} $\mu_{\hat{p}}=P$ y $\sigma^2_{\hat{p}}=\frac{P(1-P)}{n}$. Si $n\hat{p}>5$ y $n\hat{q}>5$, $\hat{p}$ se aproxima por una normal, y el intervalo es
+    \item \textbf{Intervalo para la varianza.} Si la población es normal, $\dfrac{(n-1)s^2}{\sigma^2}$ sigue una distribución $\chi^2$ con $n-1$ grados de libertad. Con $\chi^2_{\alpha/2,\,n-1}$ denotando el valor que deja a su derecha un área $\alpha/2$ (cola derecha), el intervalo es
     \[
-        \hat{p} \pm z_{1-\alpha/2}\sqrt{\frac{\hat{p}\,\hat{q}}{n}}.
+        \frac{(n-1)s^2}{\chi^2_{\alpha/2,\,n-1}} \;\le\; \sigma^2 \;\le\; \frac{(n-1)s^2}{\chi^2_{1-\alpha/2,\,n-1}} ,
     \]
-    \item \textbf{Tamaño de muestra.} Para un error máximo $E$:
+    y tomando raíz cuadrada se obtiene el intervalo para $\sigma$.
+    \item \textbf{Selección del tamaño de la muestra.} El error de estimación es $e=z_0\dfrac{\sigma}{\sqrt{n}}$, de donde
     \[
-        n \ge \left(\frac{z_{1-\alpha/2}\,\sigma}{E}\right)^2 \quad \text{(media)}, \qquad
-        n \ge \frac{z_{1-\alpha/2}^2\,\hat{p}\,\hat{q}}{E^2} \quad \text{(proporción)}.
+        n=\frac{z_0^{2}\,\sigma^{2}}{e^{2}} .
     \]
+    Con el mismo razonamiento, a partir de $e=z_0\sqrt{\dfrac{PQ}{n}}$, para la proporción se obtiene $n=\dfrac{z_0^{2}\,\hat{p}\,\hat{q}}{e^{2}}$. Esta última fórmula es una extensión de la anterior y no figura en los apuntes de clase.
 \end{enumerate}
 
 \paragraph{Datos y valores críticos.} Con $1-\alpha=0.95$ se tiene $\alpha/2=0.025$. Del enunciado: $n=15$, $\sum x_i = 2834$.
-\[
-    \bar{x}=\frac{2834}{15}=188.93\ \text{ms}, \qquad
+\begin{gather*}
+    \bar{x}=\frac{2834}{15}=188.93\ \text{ms}, \\
     s^2=\frac{\sum (x_i-\bar{x})^2}{n-1}=\frac{2054.93}{14}=146.78, \qquad
     s=12.12\ \text{ms}.
-\]
-Valores de tablas con $n-1=14$ grados de libertad: $t_{0.975,\,14}=2.1448$, $\chi^2_{0.975,\,14}=26.119$, $\chi^2_{0.025,\,14}=5.629$. Para la normal estándar, $z_{0.975}=1.96$.
+\end{gather*}
+Con $n-1=14$ grados de libertad, los valores de tablas (de cola derecha) son $t_{0.025}(14)=2.1448$, $\chi^2_{0.025,\,14}=26.119$ y $\chi^2_{0.975,\,14}=5.629$. Para la normal estándar, $z_{0.025}=1.96$.
 
 \paragraph{a) Intervalo para $\mu$.} El error estándar es $\dfrac{s}{\sqrt{n}}=\dfrac{12.12}{\sqrt{15}}=3.13$, de modo que el error de estimación es $2.1448\times 3.13 = 6.71$. Entonces
 \[
-    188.93 \pm 6.71 \;\Longrightarrow\; 182.22 \le \mu \le 195.64 \ \text{ms}.
+    188.93 \pm 6.71 \;\Longrightarrow\; \langle 182.22,\ 195.64 \rangle \ \text{ms}.
 \]
 
 \paragraph{b) Intervalo para $\sigma^2$ y $\sigma$.} Con $(n-1)s^2 = 2054.93$:
@@ -161,18 +166,18 @@ Tomando raíz cuadrada se obtiene $8.87 \le \sigma \le 19.11$ ms.
 
 \paragraph{c) Intervalo para $P$.} Se tiene $\hat{p}=\dfrac{18}{120}=0.15$ y $\hat{q}=0.85$. Se verifica la condición de normalidad: $n\hat{p}=18>5$ y $n\hat{q}=102>5$. El error estándar es $\sqrt{\dfrac{0.15\times 0.85}{120}}=0.0326$, así que
 \[
-    0.15 \pm 1.96(0.0326)=0.15 \pm 0.0639 \;\Longrightarrow\; 0.086 \le P \le 0.214 .
+    0.15 \pm 1.96(0.0326)=0.15 \pm 0.0639 \;\Longrightarrow\; \langle 0.086,\ 0.214 \rangle .
 \]
 
 \paragraph{d) Tamaño de muestra.}
 \begin{itemize}
-    \item Para la media, usando $s=12.12$ como aproximación de $\sigma$ y $E=2$:
+    \item Para la media, usando $s=12.12$ como aproximación de $\sigma$ y $e=2$:
     \[
-        n \ge \left(\frac{1.96\times 12.12}{2}\right)^2 = 140.97 \;\Rightarrow\; n=141 .
+        n = \frac{(1.96)^2(12.12)^2}{2^2} = 140.97 \;\Rightarrow\; n=141 .
     \]
-    \item Para la proporción, usando $\hat{p}=0.15$ y $E=0.05$:
+    \item Para la proporción, usando $\hat{p}=0.15$ y $e=0.05$:
     \[
-        n \ge \frac{(1.96)^2(0.15)(0.85)}{(0.05)^2}=195.9 \;\Rightarrow\; n=196 .
+        n = \frac{(1.96)^2(0.15)(0.85)}{(0.05)^2}=195.9 \;\Rightarrow\; n=196 .
     \]
     Si no se tuviera información previa, se usaría $\hat{p}=0.5$ (caso más desfavorable) y se necesitarían $n=385$.
 \end{itemize}
@@ -182,14 +187,14 @@ Tomando raíz cuadrada se obtiene $8.87 \le \sigma \le 19.11$ ms.
 \begin{tabular}{|l|c|c|}
 \hline
 \textbf{Parámetro} & \textbf{Estimación puntual} & \textbf{IC al 95\%} \\ \hline
-$\mu$ (ms) & $188.93$ & $[182.22;\ 195.64]$ \\ \hline
-$\sigma^2$ (ms$^2$) & $146.78$ & $[78.68;\ 365.08]$ \\ \hline
-$\sigma$ (ms) & $12.12$ & $[8.87;\ 19.11]$ \\ \hline
-$P$ & $0.150$ & $[0.086;\ 0.214]$ \\ \hline
+$\mu$ (ms) & $188.93$ & $\langle 182.22,\ 195.64 \rangle$ \\ \hline
+$\sigma^2$ (ms$^2$) & $146.78$ & $\langle 78.68,\ 365.08 \rangle$ \\ \hline
+$\sigma$ (ms) & $12.12$ & $\langle 8.87,\ 19.11 \rangle$ \\ \hline
+$P$ & $0.150$ & $\langle 0.086,\ 0.214 \rangle$ \\ \hline
 \end{tabular}
 \end{center}
 
-\subsubsection{Conclusión}
+\subsection{Conclusión}
 
 \begin{itemize}
     \item \textbf{Condición (i), tiempo medio.} Con $95\%$ de confianza, el tiempo medio de respuesta está entre $182.22$ y $195.64$ ms. Todo el intervalo está por debajo de $200$ ms, por lo que hay evidencia suficiente de que el servidor \textbf{cumple} la condición del tiempo medio.
@@ -199,5 +204,4 @@ $P$ & $0.150$ & $[0.086;\ 0.214]$ \\ \hline
 \end{itemize}
 
 Los resultados dependen de que la muestra sea aleatoria y de que el tiempo de respuesta sea aproximadamente normal. Esta última suposición es necesaria para los intervalos de $\mu$ (con $n$ pequeño) y de $\sigma^2$.
-
 \end{document}
