@@ -1,0 +1,147 @@
+\documentclass[10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{circuits.logic.US}
+
+\usepackage{booktabs}   
+\usepackage{ragged2e}
+\usepackage[table]{xcolor} 
+\usepackage{tabularx}  
+\usepackage{longtable} 
+\usepackage{caption}    
+\usepackage{float}
+\usepackage{makecell}
+
+\usepackage{booktabs}
+\usepackage{listings}
+
+\lstdefinestyle{rstyle}{
+  language=R,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape,
+  breaklines=true,
+  frame=single,
+  columns=flexible,
+  keepspaces=true,
+  showstringspaces=false
+}
+
+\usepackage{enumitem}
+\newlist{glosario}{description}{1}
+\setlist[glosario]{
+    font=\normalfont\bfseries,
+    leftmargin=0pt,
+    labelsep=0.5em,
+    itemsep=0.5em
+}
+
+\newcommand{\relleno}[1][\textbf{[COMPLETAR AQUÍ]}]{\textcolor{red}{#1}}
+\usepackage{colortbl}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
+
+\definecolor{tablebackground}{rgb}{0.8, 0, 0}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+\newcommand{\itemEmail}{ccapatinta@unsa.edu.pe}
+\newcommand{\itemStudent}{Camilo B.A. Capatinta Almanza}
+\newcommand{\itemCourse}{Lab. Estadística matemática, probabilidades y métodos empíricos}
+\newcommand{\itemCourseCode}{2502223}
+\newcommand{\itemSemester}{IV}
+\newcommand{\itemUniversity}{Universidad Nacional de San Agustín de Arequipa}
+\newcommand{\itemFaculty}{Facultad de Ingeniería de Producción y Servicios}
+\newcommand{\itemDepartment}{Departamento Académico de Ingeniería de Sistemas e Informática}
+\newcommand{\itemSchool}{Escuela Profesional de Ingeniería de Sistemas}
+\newcommand{\itemAcademic}{2026 - B}
+\newcommand{\itemInput}{06/11/2026}
+\newcommand{\itemOutput}{08/11/2026}
+\newcommand{\itemPracticeNumber}{03}
+\newcommand{\itemTheme}{Probabilidad aplicada a la salud pública: tasas de mortalidad y pruebas diagnósticas con R}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{40.51407pt}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{img/logo_episunsa.png}}}
+\fancyhead[C]{\fontsize{7}{7}\selectfont    \itemUniversity \\ \itemFaculty \\ \itemDepartment \\ \itemSchool \\ \textbf{\itemCourse}}
+\fancyhead[R]{\raisebox{-0.2\height}{\includegraphics[width=1.2cm]{img/logo_abet.png}}}
+
+\fancyfoot[L]{Capatinta Camilo}
+\fancyfoot[C]{\itemCourse}
+\fancyfoot[R]{Página \thepage}
+
+\begin{document}
+
+	\vspace*{10px}
+	
+	\begin{center}
+		\parbox{0.8\textwidth}{\centering\fontsize{17}{20}\selectfont\textbf{Informe de laboratorio \itemPracticeNumber}}
+	\end{center}
+	\begin{center}
+		\parbox{0.8\textwidth}{\centering\textbf{\Large Tema: \itemTheme}}
+	\end{center}
+
+\begin{flushright}
+    \begin{tabular}{|M{2.5cm}|N|}
+        \hline 
+        \rowcolor{tablebackground}
+        \color{white} \textbf{Nota}  \\
+        \hline 
+             \\[30pt]
+        \hline          
+    \end{tabular}
+\end{flushright}    
+
+\begin{table}[h!]
+    \begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}        
+        \hline 
+        \rowcolor{tablebackground}
+        \color{white} \textbf{Estudiante} & \color{white}\textbf{Escuela}  & \color{white}\textbf{Asignatura}   \\
+        \hline 
+        {\itemStudent \par \itemEmail} & \itemSchool & {\itemCourse \par Semestre: \itemSemester \par Código: \itemCourseCode}     \\
+        \hline          
+    \end{tabular}
+\end{table}     
+
+\begin{table}[H]
+    \begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+        \hline 
+        \rowcolor{tablebackground}
+        \color{white}\textbf{Laboratorio} & \color{white}\textbf{Tema}  & \color{white}\textbf{Duración}   \\
+        \hline 
+        \itemPracticeNumber & \itemTheme & 02 horas   \\
+        \hline 
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+        \hline 
+        \rowcolor{tablebackground}
+        \color{white}\textbf{Semestre académico} & \color{white}\textbf{Fecha de inicio}  & \color{white}\textbf{Fecha de entrega}   \\
+        \hline 
+        \itemAcademic & \itemInput &  \itemOutput  \\
+        \hline 
+    \end{tabular}
+\end{table}
+
+\newpage
+\tableofcontents
+\thispagestyle{plain}
+\clearpage
+
+\section{Actividades}
+
+\end{document}
