@@ -142,6 +142,60 @@
 \thispagestyle{plain}
 \clearpage
 
-\section{Actividades}
+\section{Actividades pag. 146}
+
+\subsection{Ejercicio 14. Captura y recaptura de peces: distribución hipergeométrica y su aproximación}
+
+En un estudio sobre la población de peces de un lago, los científicos capturan peces del lago, los marcan y los liberan.
+
+Supongamos que, durante un período de cinco días, se marcan y liberan 200 peces de cierto tipo. Como parte del mismo estudio, tres días después se capturan 20 peces de ese tipo. Sea $X$ el número de peces marcados entre los 20 capturados. Supongamos que se sabe que el lago tiene 1000 peces de este tipo en particular.
+
+\begin{enumerate}[label=(\alph*)]
+    \item La distribución de la variable aleatoria $X$ es (elija una):
+    \begin{enumerate}[label=(\roman*)]
+        \item binomial
+        \item hipergeométrica
+        \item binomial negativa
+        \item Poisson
+    \end{enumerate}
+
+    \item Utilice comandos de R para hallar $P(X \leq 4)$.
+
+    \item ¿Cuál de las distribuciones enumeradas en el inciso (a) puede utilizarse como aproximación a la distribución de $X$?
+
+    \item Utilizando la distribución aproximada, dé una aproximación de la probabilidad $P(X \leq 4)$ y compárela con la probabilidad exacta hallada en el inciso (b).
+\end{enumerate}
+
+\subsection{Ejercicio 15. Inspección de componentes electrónicos defectuosos}
+
+En un envío de 10\,000 componentes electrónicos de cierto tipo, 300 son defectuosos. Supongamos que se seleccionan al azar 50 componentes para su inspección, y sea $X$ el número de componentes defectuosos encontrados.
+
+\begin{enumerate}[label=(\alph*)]
+    \item La distribución de la variable aleatoria $X$ es (elija una):
+    \begin{enumerate}[label=(\roman*)]
+        \item binomial
+        \item hipergeométrica
+        \item binomial negativa
+        \item Poisson
+    \end{enumerate}
+
+    \item Utilice comandos de R para hallar $P(X \leq 3)$.
+
+    \item ¿Cuál de las distribuciones enumeradas en el inciso (a) puede utilizarse como aproximación a la distribución de $X$?
+
+    \item Utilizando la distribución aproximada, dé una aproximación de la probabilidad $P(X \leq 3)$ y compárela con la probabilidad exacta hallada en el inciso (b).
+\end{enumerate}
+
+\subsection{Ejercicio 21. Aproximaciones sucesivas de la distribución hipergeométrica}
+
+Supongamos que se toma una muestra aleatoria simple de 200 componentes del envío de 10\,000 componentes electrónicos del Ejercicio 15, el cual contiene 300 componentes defectuosos, y sea $Y$ el número de componentes defectuosos en la muestra.
+
+\begin{enumerate}[label=(\alph*)]
+    \item La variable aleatoria $Y$ tiene una distribución hipergeométrica$(M_1, M_2, n)$, la cual puede aproximarse mediante una distribución binomial$(n, p)$, que a su vez puede aproximarse mediante una distribución Poisson$(\lambda)$. Especifique los parámetros de cada una de las distribuciones mencionadas en la última oración.
+
+    \item Utilice comandos de R para calcular la probabilidad exacta $P(Y \leq 10)$, así como las dos aproximaciones a esta probabilidad mencionadas en el inciso (a).
+\end{enumerate}
+
+\section{Actividades pag. 147}
 
 \end{document}
