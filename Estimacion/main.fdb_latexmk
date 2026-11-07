@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1793631885.71341 "main.bcf" "main.bbl" "main" 1794056150.29947 0
-  "main.bcf" 1794056150.20295 133541 46de64d4d61bc9c76a8eed27352ce6f8 "pdflatex"
+["biber main"] 1793631885.71341 "main.bcf" "main.bbl" "main" 1794056285.70553 0
+  "main.bcf" 1794056285.58105 133541 46de64d4d61bc9c76a8eed27352ce6f8 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1794056148.19422 "/home/camiloasd/Documentos/VS/EMAT-Actividades/Muestreo/main.tex" "main.pdf" "main" 1794056150.29983 0
-  "/home/camiloasd/Documentos/VS/EMAT-Actividades/Muestreo/main.tex" 1794056145.99417 11321 922ac9ad11bcd9539daae3425c79bb22 ""
+["pdflatex"] 1794056283.68842 "/home/camiloasd/Documentos/VS/EMAT-Actividades/Estimacion/main.tex" "main.pdf" "main" 1794056285.70598 0
+  "/home/camiloasd/Documentos/VS/EMAT-Actividades/Estimacion/main.tex" 1794056280.46797 11381 4e4f69af3f98e95000f8182f4ac3df3d ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1529098226 3124 3813fd4c981d99822890a2861b0d274c ""
@@ -179,10 +179,11 @@
   "img/Escudo_UNSA.png" 1793629082.789 551300 bfb751c315bf335e9fb54b959f58fe6b ""
   "img/logo_abet.png" 1793629095.36082 6307 66ff7f82180b3b29c348bdae974447b6 ""
   "img/logo_episunsa.png" 1793629100.03725 6815 7da1fe7727dad63b523d0fbca337594d ""
-  "main.aux" 1794056150.19495 3044 9b200970c5e416b364a184e55e7c1606 "pdflatex"
+  "main.aux" 1794056285.57005 3044 3dda48b1de6b4cc30f2fdecb1bdb616d "pdflatex"
   "main.bbl" 1793631888.10195 466 76d65a242ec496c9b4361af646ff12cb "biber main"
-  "main.run.xml" 1794056150.20477 2360 e823dede0fdb354f7eff64774b1cfad0 "pdflatex"
-  "main.tex" 1794056145.99417 11321 922ac9ad11bcd9539daae3425c79bb22 ""
+  "main.run.xml" 1794056285.58351 2360 e823dede0fdb354f7eff64774b1cfad0 "pdflatex"
+  "main.tex" 1794056280.46797 11381 4e4f69af3f98e95000f8182f4ac3df3d ""
+  "main.toc" 1794056285.58351 917 69b48968700a24ca0cd6e9b6be66c516 "pdflatex"
   "portada.tex" 1793632284.64887 1784 35e599ad0ce6e115ab43d0633a3fe8d1 ""
   (generated)
   "main.aux"
@@ -190,4 +191,5 @@
   "main.log"
   "main.pdf"
   "main.run.xml"
+  "main.toc"
   (rewritten before read)
